@@ -1,21 +1,22 @@
-# Prosjektoppgave-h-st
-Oppgaven består av kunnskap og ferdigheter
-# Prosjekt: SmartSkoleApp
+# Prosjekt: Gulfades - Bestill frisørtime
 
-## Kort beskrivelse
-Dette prosjektet skal være en webapplikasjon der elever kan logge inn for å se ukeplaner, levere oppgaver og chatte med lærere. 
-En liten prototype (MVP) kan være en enkel innloggingsside og en side som viser timeplanen.
+## 💈 Kort beskrivelse
+Dette prosjektet skal være en nettside for **Gulfades**, der kunder kan bestille frisørtime på nett.  
+Nettsiden skal vise tilgjengelige frisører, tider og tjenester (f.eks. fade, skjegg, hårklipp).  
 
-## Teknologier og utstyr
-- **Frontend:** HTML, CSS, JavaScript (for brukergrensesnitt)
-- **Backend:** Node.js med Express (for API)
-- **Database:** MongoDB (lagre brukere og timeplaner)
-- **Utstyr:** PC med VSCode, GitHub og evt. testserver
+En første prototype (MVP) kan inneholde:
+- En enkel bestillingsside med navn, telefonnummer og valgt tid
+- En knapp for å sende inn bestillingen (lagres foreløpig lokalt eller i database)
 
-## Hvordan jeg viser kompetanse
-- **Utvikling:** Lage kode for frontend/backend
-- **Drift:** Sette opp server eller lokal database, håndtere versjonskontroll med Git
-- **Brukerstøtte:** Lage en enkel brukerveiledning og teste brukeropplevelsen
+## 💻 Teknologier og utstyr
+- **Frontend:** HTML, CSS og JavaScript – lage selve nettsiden og designet  
+- **Backend:** Node.js (Express) – håndtere bestillinger og sende data til server  
+- **Database:** MongoDB – lagre bestillingene  
+- **Utstyr:** PC med VSCode, GitHub, nettleser for testing  
 
-## Lenker
+## ⚙️ Hvordan jeg viser kompetanse i fagene
+- **Utvikling:** Lager nettsiden med HTML, CSS og JavaScript. Lager backend for bestillingene.  
+- **Drift:** Bruker GitHub for versjonskontroll, setter opp server og database lokalt.  
+- **Brukerstøtte:** Lager brukervennlig bestillingsskjema og tester med brukere.  
 
+## 📁 Utkast til mappestruktur
