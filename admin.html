@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gulfades Admin-panel</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <header>
+    <h1>💈 Gulfades Admin-panel</h1>
+    <p>Se alle bestillinger</p>
+  </header>
+
+  <main>
+    <section class="booking">
+      <h2>Bestillinger</h2>
+      <table id="booking-table">
+        <thead>
+          <tr>
+            <th>Navn</th>
+            <th>Telefon</th>
+            <th>Tjeneste</th>
+            <th>Dato</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <p id="loading">Laster bestillinger...</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Gulfades Frisør – Admin-side</p>
+  </footer>
+
+  <script>
+    async function hentBestillinger() {
+      const response = await fetch("http://localhost:3000/api/bookings");
+      const bookings = await response.json();
+      const tbody = document.querySelector("#booking-table tbody");
+      const loading = document.getElementById("loading");
+
+      tbody.innerHTML = "";
+      loading.style.display = "none";
+
+      if (bookings.length === 0) {
+        loading.textContent = "Ingen bestillinger enda.";
+        loading.style.display = "block";
+        return;
+      }
+
+      bookings.forEach(b => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${b.name}</td>
+          <td>${b.phone}</td>
+          <td>${b.service}</td>
+          <td>${b.date}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    hentBestillinger();
+  </script>
+</body>
+</html>

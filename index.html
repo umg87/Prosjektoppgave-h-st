@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <h1>💈 Gulfades Frisør</h1>
+    <p>Bestill time på nett – raskt og enkelt</p>
+  </header>
+
+  <main>
+    <section class="booking">
+      <h2>Bestill time</h2>
+      <form id="booking-form">
+        <label for="name">Navn:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="phone">Telefonnummer:</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="service">Tjeneste:</label>
+        <select id="service" name="service" required>
+          <option value="">Velg tjeneste</option>
+          <option value="fade">Fade</option>
+          <option value="skjegg">Skjeggtrimm</option>
+          <option value="klipp">Hårklipp</option>
+        </select>
+
+        <label for="date">Dato:</label>
+        <input type="date" id="date" name="date" required />
+
+        <button type="submit">Bestill</button>
+      </form>
+      <p id="confirmation"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Gulfades Frisør – Laget som skoleprosjekt</p>
+  </footer>
+
+  <script src="script.js"></script>
+    
+</body>
+</html>
