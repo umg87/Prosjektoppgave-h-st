@@ -11,7 +11,7 @@ En første prototype (MVP) kan inneholde:
 ##  Teknologier og utstyr
 - **Frontend:** HTML, CSS og JavaScript – lage selve nettsiden og designet  
 - **Backend:** Node.js (Express) – håndtere bestillinger og sende data til server  
-- **Database:** MongoDB – lagre bestillingene  
+- **Database:** MariaDB – lagre bestillingene  
 - **Utstyr:** PC med VSCode, GitHub, nettleser for testing  
 
 ##  Hvordan jeg viser kompetanse i fagene
