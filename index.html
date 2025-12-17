@@ -1,49 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gulfades Frisør</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <header>
-    <h1>💈 Gulfades Frisør</h1>
+  <header>
+    <h1>💈 Gulfades Barbershop</h1>
     <p>Bestill time på nett – raskt og enkelt</p>
   </header>
 
   <main>
-    <section class="booking">
-      <h2>Bestill time</h2>
-      <form id="booking-form">
-        <label for="name">Navn:</label>
-        <input type="text" id="name" name="name" required />
 
-        <label for="phone">Telefonnummer:</label>
-        <input type="tel" id="phone" name="phone" required />
+    <!-- BOOKING -->
+<section class="booking">
+  <h2>Bestill time</h2>
 
-        <label for="service">Tjeneste:</label>
-        <select id="service" name="service" required>
-          <option value="">Velg tjeneste</option>
-          <option value="fade">Fade</option>
-          <option value="skjegg">Skjeggtrimm</option>
-          <option value="klipp">Hårklipp</option>
-        </select>
+  <form id="booking-form">
+    <!-- Kunde -->
+    <div class="field">
+      <label>Navn</label>
+      <input type="text" name="customer_name" id="customer_name" required />
+    </div>
 
-        <label for="date">Dato:</label>
-        <input type="date" id="date" name="date" required />
+    <div class="field">
+      <label>Telefon</label>
+      <input type="tel" name="customer_phone" id="customer_phone" required />
+    </div>
 
-        <button type="submit">Bestill</button>
-      </form>
-      <p id="confirmation"></p>
+    <!-- Barber -->
+    <div class="field">
+      <label>Velg barber</label>
+      <select name="barber_id" id="barber_id" required>
+        <option value="">Velg barber</option>
+        <option value="1">Furkan – Fade & Klipp</option>
+        <option value="2">Rehan – Skjegg & Klipp</option>
+        <option value="3">Umar Gul – Alle tjenester</option>
+      </select>
+    </div>
+
+    <!-- Tjenester -->
+    <div class="field">
+      <label>Tjenester</label>
+      <select name="services[]" id="service" multiple required>
+        <option value="1">Fade (30 min)</option>
+        <option value="2">Skjeggtrimm (20 min)</option>
+        <option value="3">Hårklipp (45 min)</option>
+      </select>
+      <small>Hold Ctrl / Cmd for flere valg</small>
+    </div>
+
+    <!-- Dato -->
+    <div class="field">
+      <label>Dato</label>
+      <input type="date" name="booking_date" id="booking_date" required />
+    </div>
+
+    <!-- Tid -->
+    <div class="field">
+      <label>Tid</label>
+      <select name="start_time" id="time" required>
+        <option value="">Velg tid</option>
+        <option value="09:00">09:00</option>
+        <option value="09:30">09:30</option>
+        <option value="10:00">10:00</option>
+        <option value="10:30">10:30</option>
+        <option value="11:00">11:00</option>
+        <option value="11:30">11:30</option>
+        <option value="12:00">12:00</option>
+        <option value="12:30">12:30</option>
+        <option value="13:00">13:00</option>
+        <option value="13:30">13:30</option>
+        <option value="14:00">14:00</option>
+      </select>
+    </div>
+
+    <!-- Kommentar -->
+    <div class="field">
+      <label>Kommentar</label>
+      <textarea name="message" placeholder="Noe vi bør vite?"></textarea>
+    </div>
+
+    <button type="submit">Bestill time</button>
+  </form>
+
+  <p id="confirmation"></p>
+</section>
+
+    <!-- SERVICES -->
+    <h1 style="text-align:center; margin-top:40px;">Våre tjenester</h1>
+    <section class="services">
+      <div class="service-card">
+        <h3>Fade</h3>
+        <p>En moderne og stilig fade-klipp som passer for alle anledninger.</p>
+        <p><strong>Pris: 400 NOK</strong></p>
+      </div>
+
+      <div class="service-card">
+        <h3>Skjeggtrimm</h3>
+        <p>Profesjonell skjeggtrimm for et velstelt utseende.</p>
+        <p><strong>Pris: 250 NOK</strong></p>
+      </div>
+
+      <div class="service-card">
+        <h3>Hårklipp</h3>
+        <p>Klassisk hårklipp tilpasset din stil og preferanser.</p>
+        <p><strong>Pris: 350 NOK</strong></p>
+      </div>
     </section>
+
+    <!-- TEAM -->
+  <section class="team">
+
+  <a href="furkan.html" class="team-member">
+    <img src="bilder/furkan.jpg" alt="Furkan" />
+    <h3>Furkan</h3>
+    <p>Senior stylist med 10 års erfaring innen herreklipp.</p>
+  </a>
+
+  <a href="rehan.html" class="team-member">
+    <img src="bilder/rehna.jpg" alt="Rehan" />
+    <h3>Rehan Butt</h3>
+    <p>Ekspert på skjeggtrimm og moderne frisyrer.</p>
+  </a>
+
+  <a href="umar.html" class="team-member">
+    <img src="bilder/Bildeavmeg.jpg" alt="Umar Gul" />
+    <h3>Umar Gul</h3>
+    <p>Spesialist på fade-klipp og kreative stiler.</p>
+  </a>
+
+</section>
   </main>
 
   <footer>
-    <p>© 2025 Gulfades Frisør – Laget som skoleprosjekt</p>
+    <p>© 2025 Gulfades Frisør – Alle rettigheter reservert</p>
   </footer>
 
   <script src="script.js"></script>
-    
-</body>
-</html>
