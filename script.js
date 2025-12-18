@@ -1,23 +1,26 @@
-const api_url = "http://127.0.0.1:5500";
+console.log("JS lastet ");
+
+const api_url = "http://127.0.0.1:5000";
 
 document.getElementById("booking-form").addEventListener("submit", async function (event) {
   event.preventDefault();
 
-  //Hent flere tjenester
   const servicesSelect = document.getElementById("service");
   const services = Array.from(servicesSelect.selectedOptions).map(
     option => option.value
   );
-const booking = {
-  name: document.getElementById("customer_name").value,
-  phone: document.getElementById("customer_phone").value,
-  barber: document.getElementById("barber_id").value,
-  service: services,
-  date: document.getElementById("date").value,   
-  time: document.getElementById("time").value
-};
 
-  console.log("Sender booking:", booking); //  VIKTIG
+  const booking = {
+    name: document.getElementById("customer_name").value,
+    phone: document.getElementById("customer_phone").value,
+    barber: document.getElementById("barber_id").value,
+    service: services,
+    date: document.getElementById("date").value,
+    time: document.getElementById("time").value,
+    comment: document.getElementById("comment").value
+  };
+
+  console.log("Sender booking:", booking);
 
   try {
     const response = await fetch(api_url + "/api/bookings", {
@@ -27,12 +30,16 @@ const booking = {
     });
 
     const data = await response.json();
+
     document.getElementById("confirmation").textContent = data.message;
-    event.target.reset();
+
+    if (response.ok) {
+      event.target.reset();
+    }
 
   } catch (error) {
     console.error("Feil ved sending:", error);
     document.getElementById("confirmation").textContent =
-      "Noe gikk galt. Prøv igjen.";
+      "Kunne ikke koble til serveren";
   }
 });
