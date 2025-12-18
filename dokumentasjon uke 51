@@ -1,0 +1,23 @@
+Dokumentasjon
+14.12.25 Mandag: Jeg jobbet med tilbakemeldingene jeg har fått etter fagsamtalen. SomDu må implementere flask og mariadb tilkobling på nettsiden din, akkurat
+nå er det bare html, css og javascript
+• Du må kjøre prosjektet ditt på raspberry pi’en din
+• Du må legge koden inn på github, bruk gjerne github projects til å 
+strukturere planene dine
+
+15.12.25 Tirsdag: 
+I var målet om å legge inn data på databasene hvordan de skal fungere og hva slags informasjon som skal lagres. Jeg lagde databaser og fikk de til å fungere. Settet din verider og navn og id for at den skal fungere
+
+•	planla hvilke tabeller databasen skulle inneholde (for eksempel bookings, tjenester og barbere).
+•	Opprettet databasen i MariaDB.
+•	Definerte riktige kolonner, datatyper, ID-er og relasjoner mellom tabellene.
+•	Sørget for at databasen fungerte som den skulle og kunne ta imot data.
+Fokuset denne dagen var å legge et solid grunnlag for bookingsystemet slik at backend senere kan lagre og hente data korrekt. Men fikk ikke til så jobber med det videre neste dag.
+
+Torsdag. 
+Denne uken har jeg:
+•	Jobbet med tilbakemeldinger fra fagsamtalen
+•	Startet overgangen fra kun frontend til et fullstack-prosjekt
+•	Planlagt og opprettet databasen i MariaDB
+Dette har gitt et godt utgangspunkt for videre arbeid med Flask-backend, databasekobling og kjøring på Raspberry Pi.
+
